@@ -61,7 +61,7 @@ const controller = {
           });
       } else {
         Order.paginate(
-          { _id: user._id },
+          { _id: user.id },
           { offset: (page - 1) * 12, limit: 12, sort: { createdAt: "desc" } }
         )
           .then((result) => {
