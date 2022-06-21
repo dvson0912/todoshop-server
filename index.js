@@ -32,7 +32,12 @@ connectDB();
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.use(
+  cors({
+    origin: "https://cool-sfogliatella-ca13c3.netlify.app",
+    credentials: true,
+  })
+);
 app.use(express.static(__dirname + "/public"));
 
 app.use("/product", productRoute);
