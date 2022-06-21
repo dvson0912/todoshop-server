@@ -12,7 +12,7 @@ const authRoute = require("./routes/auth.route");
 const orderRoute = require("./routes/order.route");
 
 const app = express();
-const post = process.env.POST || 3030;
+const post = process.env.PORT || 5000;
 
 const connectDB = async () => {
   await mongoose
