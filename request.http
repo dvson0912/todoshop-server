@@ -1,0 +1,54 @@
+POST http://localhost:5000/category/create
+Content-Type: application/json
+
+{
+    "name":"áo đôi",
+    "link":"ao-khoac"
+}
+
+###
+
+GET http://localhost:5000/category
+
+###
+
+GET http://localhost:5000/category/do-nam
+
+###
+POST http://localhost:5000/type/create
+Content-Type: application/json
+token:breare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODg5NTkwMzE1YjFmZDJiOGM2YTllYSIsImFkbWluIjp0cnVlLCJpYXQiOjE2NTMxNDMwMjcsImV4cCI6MTY1MzE1MDIyN30.QANawZvyRKsPdc5Rup6ZGac1ukaYWQ4je1v7JmpHyDk
+
+{
+    "name":"áo thun đô",
+    "link":"ao-thun-do",
+    "category":"6274987a34ecabd8007ae5bc"
+}
+
+###
+POST http://localhost:5000/type/delete
+Content-Type: application/json
+
+{
+    "id":"6277fcbfa53502e773f58152"
+}
+
+###
+GET http://localhost:5000/type?page=2
+###
+POST http://localhost:5000/product/create
+Content-Type: application/json
+
+{
+    "name":"sondao1234",
+    "avatar":"123",
+    "price":"500000",
+    "size":"['X','M','L']",
+    "color":"['X','M','L']",
+    "descriptionImg":"['X','M','L']",
+    "link":"ao-thun-doi",
+    "category":"6274987a34ecabd8007ae5bc",
+    "type":"6274a42676cd699c6363066e"
+}
+###
+GET http://localhost:5000/product
