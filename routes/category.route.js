@@ -4,6 +4,10 @@ const middlewareUser = require("../middleware/user.middleware");
 
 const router = express.Router();
 
+router.get("/123", (req, res) => {
+  return res.status(200).json({ message: "123" });
+});
+
 router.post(
   "/create",
   middlewareUser.verifyUser,
