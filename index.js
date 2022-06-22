@@ -34,7 +34,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://soggy-clam.surge.sh/",
+    origin: "http://soggy-clam.surge.sh",
     // origin:"http://localhost:3000".
     credentials: true,
   })
