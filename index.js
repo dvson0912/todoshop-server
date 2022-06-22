@@ -34,7 +34,7 @@ app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://cool-sfogliatella-ca13c3.netlify.app",
+    origin: "https://lovely-lokum-279835.netlify.app",
     // origin:"http://localhost:3000".
     credentials: true,
   })
