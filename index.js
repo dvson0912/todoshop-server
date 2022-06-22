@@ -35,6 +35,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "https://cool-sfogliatella-ca13c3.netlify.app",
+    // origin:"http://localhost:3000".
     credentials: true,
   })
 );

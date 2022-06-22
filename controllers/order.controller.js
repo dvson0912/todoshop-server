@@ -61,7 +61,7 @@ const controller = {
           });
       } else {
         Order.paginate(
-          { _id: user.id },
+          { idUser: user.id },
           { offset: (page - 1) * 12, limit: 12, sort: { createdAt: "desc" } }
         )
           .then((result) => {
@@ -81,7 +81,7 @@ const controller = {
       const user = req.user;
       const idOrder = req.query.id;
       const order = await Order.findById(idOrder);
-      if (user.id === order.idUser || user.admin) {
+      if (user.id === order.idUser.toString() || user.admin) {
         const orderDetails = await OrderDetails.find({ idOrder });
         return res.status(200).json({ data: { order, orderDetails } });
       } else {
